@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .authBox {
+  position: relative;
+  z-index: 2;
+  height: 30vh;
+  min-height: 310px;
+  width: 23vw;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+.main .authBox h1.heading {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+.main .authBox .inputs h5.heading {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.main .authBox .inputs input {
+  margin-bottom: 15px;
+  width: 18vw;
+  min-width: 380px;
+  height: 35px;
+  border: solid 1px #fff;
+  background: none;
+  border-radius: 8px;
+}
+.main .authBox .inputs:hover {
+  background-color: #fff;
+}
+.main .authBox button {
+  background: none;
+  border: solid 1px #fff;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+.main .authBox button h5 {
+  padding: 10px 37px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main .authBox button:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+.main .authBox button:hover h5 {
+  color: #000;
+}
+.main img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=auth.module.css.map */
