@@ -48,11 +48,12 @@
                 border: solid 1px #fff;
                 background: none;
                 border-radius: 8px;
+                color: #fff;
+                padding-left: 8px;
+                outline: none;
             }
 
-            &:hover{
-                background-color: #fff;
-            }
+            
         }
 
         & button{
@@ -60,6 +61,11 @@
             border: solid 1px #fff;
             border-radius: 8px;
             transition: .4s;
+
+            & a{
+                text-decoration: none;
+            }
+            
             & h5{
                 padding: 10px 37px;
                 color: #fff;

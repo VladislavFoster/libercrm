@@ -45,15 +45,18 @@
   border: solid 1px #fff;
   background: none;
   border-radius: 8px;
-}
-.main .authBox .inputs:hover {
-  background-color: #fff;
+  color: #fff;
+  padding-left: 8px;
+  outline: none;
 }
 .main .authBox button {
   background: none;
   border: solid 1px #fff;
   border-radius: 8px;
   transition: 0.4s;
+}
+.main .authBox button a {
+  text-decoration: none;
 }
 .main .authBox button h5 {
   padding: 10px 37px;
