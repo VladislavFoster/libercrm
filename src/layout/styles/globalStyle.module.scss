@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 11vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #DFC7AD 0%, #E0E3E9 147.27%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+
+    & .logoContainer{
+        margin-left: 12vw;
+        margin-top: -1vh;
+        display: flex;
+        align-items: center;
+
+        & img{
+            width: 45px
+        }
+
+        & h4{
+            margin-left: 10px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    & .userInfo{
+        display: flex;
+        min-width: 150px;
+        height: 5.5vh;
+        border-radius: 25px;
+        background-color: #fff;
+        align-items: center;
+        position: absolute;
+        right: 2vw;
+        top: 2.25vh;
+
+
+        & .userImg{
+            height: 5.5vh;
+        }
+
+        & h5{
+            margin: 0 10px 0 6px;
+            font-weight: 400;
+            font-style: 14px;
+        }
+
+        & .arrow{
+            width: 12px;
+            height: 8px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.nav{
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    width: 12vw;
+    background: linear-gradient(180.03deg, #DFC7AD 0.03%, #E0E3E9 136.82%);
+    top: 0;
+    left: 0;
+
+    & .navItems{
+        display: flex;
+        flex-direction: column;
+        margin-top: 14vh;
+        margin-left: 20px;
+
+        & .navItem{
+            transition: .4s;
+            & a{
+                color: #fff;
+                text-decoration: none;
+                font-weight: 400;
+            }
+
+            &:hover{
+                transform: scale(1.03);
+
+                & a{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.main{
+    position: relative;
+    height: 90vh;
+    width: 90vw;
+    z-index: 3;
+    border-radius: 45px 0px 0px 0px;
+    background-color: #fff;
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
