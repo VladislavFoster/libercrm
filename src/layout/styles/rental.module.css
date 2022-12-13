@@ -1,1 +1,117 @@
-/*# sourceMappingURL=rental.module.css.map */
+span {
+  font-weight: 600;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+.main .infoContainer {
+  width: 80%;
+  margin-top: 60px;
+}
+.main .infoContainer .infoDescr {
+  display: flex;
+  position: relative;
+  border-bottom: solid 1px #CCCCCC;
+}
+.main .infoContainer .infoDescr .item {
+  display: flex;
+  align-items: center;
+}
+.main .infoContainer .infoDescr .item h5 {
+  color: #5B626B;
+  font-size: 16px;
+}
+.main .infoContainer .infoDescr .item img {
+  height: 8px;
+  margin-left: 8px;
+}
+.main .infoContainer .infoDescr .item:nth-child(1) {
+  width: 20%;
+}
+.main .infoContainer .infoDescr .item:nth-child(1) h5 {
+  margin-left: 5px;
+}
+.main .infoContainer .infoDescr .item:nth-child(2) {
+  width: 15%;
+}
+.main .infoContainer .infoDescr .item:nth-child(3) {
+  width: 22.5%;
+}
+.main .infoContainer .infoDescr .item:nth-child(4) {
+  width: 27%;
+}
+.main .infoContainer .infoDescr .item:nth-child(5) {
+  width: 15.5%;
+}
+.main .infoContainer .infoItems .container {
+  display: flex;
+  border-bottom: solid 1px #CCCCCC;
+  height: 55px;
+}
+.main .infoContainer .infoItems .container .item {
+  margin-top: 10px;
+}
+.main .infoContainer .infoItems .container .item h5 {
+  font-weight: 400;
+  color: #000;
+}
+.main .infoContainer .infoItems .container .item:nth-child(1) {
+  width: 20%;
+}
+.main .infoContainer .infoItems .container .item:nth-child(1) h5 {
+  font-weight: 600;
+  margin-left: 5px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(2) {
+  width: 15%;
+}
+.main .infoContainer .infoItems .container .item:nth-child(3) {
+  width: 22.5%;
+}
+.main .infoContainer .infoItems .container .item:nth-child(4) {
+  width: 27%;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) {
+  width: 15.5%;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) h5 {
+  padding: 6px 8px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) .green {
+  background-color: #D4F7CE;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 132px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) .green h5 {
+  color: #68C049;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) .yellow {
+  background-color: #F7EBCE;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 132px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) .yellow h5 {
+  color: #FFB400;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) .red {
+  background-color: #F7CECE;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 132px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(5) .red h5 {
+  color: #FF5858;
+}/*# sourceMappingURL=rental.module.css.map */
