@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../screens/header';
 import Nav from '../../screens/nav';
 import globalStyle from '../../layout/styles/globalStyle.module.css';
+import style from '../../layout/styles/rental.module.css'
 
 const Rental = () => {
   return (

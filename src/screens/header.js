@@ -15,7 +15,6 @@ function Header() {
         <div className={globalStyle['userInfo']}>
             <img src={userImg} alt="" className={globalStyle['userImg']}/>
             <h5>Имя пользователя</h5>
-            <img src={arrow} alt="" className={globalStyle['arrow']}/>
         </div>
     </div>
   )

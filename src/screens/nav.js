@@ -7,8 +7,8 @@ function Nav() {
         <div className={globalStyle['navItems']}>
             <div className={globalStyle['navItem']}><a href="/rental">Прокат</a></div>
             <div className={globalStyle['navItem']}><a href="/books">Книги</a></div>
-            <div className={globalStyle['navItem']}><a href="/clients">Сотрудники</a></div>
-            <div className={globalStyle['navItem']}><a href="/employees">Клиенты</a></div>
+            <div className={globalStyle['navItem']}><a href="/employees">Сотрудники</a></div>
+            <div className={globalStyle['navItem']}><a href="/clients">Клиенты</a></div>
         </div>
     </div>
   )
