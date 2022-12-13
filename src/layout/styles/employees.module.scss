@@ -1,0 +1,94 @@
+span{
+    font-weight: 600;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+
+    & .infoContainer{
+        width: 80%;
+        margin-top: 60px;
+        
+        & .infoDescr{
+            display: flex;
+            position: relative;
+            border-bottom: solid 1px #CCCCCC;
+
+            & .item{
+                display: flex;
+                align-items: center;
+
+                & h5{
+                    color: #5B626B;
+                    font-size: 16px;
+                }
+
+                & img{
+                    height: 8px;
+                    margin-left: 8px;
+                }
+
+                &:nth-child(1){
+                    width: 25%;
+                    & h5{
+                        margin-left: 5px;
+                    }
+                }
+
+                &:nth-child(2){
+                    width: 20%;
+                }
+
+                &:nth-child(3){
+                    width: 45%;
+                }
+
+                &:nth-child(4){
+                    width: 10%;
+                    & h5{
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+
+        & .infoItems{
+            & .container{
+                display: flex;
+                border-bottom: solid 1px #CCCCCC;
+                height: 55px;
+
+                & .item{
+                    margin-top: 10px;
+                    & h5{
+                        font-weight: 400;
+                        color: #000;
+                    }
+
+                    &:nth-child(1){
+                        width: 25%;
+                        & h5{
+                            font-weight: 600;
+                            margin-left: 5px;
+                        }
+                    }
+    
+                    &:nth-child(2){
+                        width: 20%;
+                    }
+    
+                    &:nth-child(3){
+                        width: 45%;
+                    }
+    
+                    &:nth-child(4){
+                        width: 10%;
+                    }
+    
+
+                }
+            }
+        }
+    }
+}
