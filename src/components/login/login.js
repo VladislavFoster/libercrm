@@ -1,4 +1,4 @@
-import React, {useState,  useRef} from 'react';
+import React from 'react';
 import bg from '../../assets/imgs/bgAuthImg.png';
 import style from '../../layout/styles/auth.module.css';
 import Inputs from './inputs/inputs';
