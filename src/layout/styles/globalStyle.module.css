@@ -98,4 +98,69 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   margin-top: 10vh;
   margin-left: 10vw;
+}
+.main .btnAddContainer {
+  position: absolute;
+  margin-top: 40px;
+  width: 80%;
+}
+.main .btnAddContainer button {
+  border-radius: 12px;
+  border: none;
+  background-color: #3BAACD;
+  transition: 0.4s;
+}
+.main .btnAddContainer button h5 {
+  padding: 7px 10px;
+  font-weight: 400;
+  color: #fff;
+}
+.main .btnAddContainer button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.main .btnAddContainer .modal {
+  min-height: 150px;
+  width: 400px;
+  border-radius: 25px;
+  border: solid 2px #DFC7AD;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 2;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.main .btnAddContainer .modal:last-child {
+  padding-bottom: 60px;
+}
+.main .btnAddContainer .modal h2 {
+  margin-top: 2px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.main .btnAddContainer .modal input {
+  width: 80%;
+  height: 30px;
+  border-radius: 12px;
+  padding-left: 5px;
+  border: solid 1px #cccccc;
+  margin: 5px auto;
+}
+.main .btnAddContainer .modal button {
+  height: 35px;
+  width: 120px;
+  margin: 0 140px 0;
+  color: #fff;
+  position: absolute;
+  justify-self: center;
+  bottom: 10px;
+}
+.main .btnAddContainer .modal img {
+  height: 14px;
+  width: 14px;
+  margin-left: auto;
+  margin-right: 16px;
+  margin-top: 12px;
+  cursor: pointer;
 }/*# sourceMappingURL=globalStyle.module.css.map */

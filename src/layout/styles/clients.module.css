@@ -29,22 +29,16 @@ span {
   margin-left: 8px;
 }
 .main .infoContainer .infoDescr .item:nth-child(1) {
-  width: 25%;
+  width: 20%;
 }
 .main .infoContainer .infoDescr .item:nth-child(1) h5 {
   margin-left: 5px;
 }
 .main .infoContainer .infoDescr .item:nth-child(2) {
-  width: 20%;
+  width: 65%;
 }
 .main .infoContainer .infoDescr .item:nth-child(3) {
-  width: 45%;
-}
-.main .infoContainer .infoDescr .item:nth-child(4) {
-  width: 10%;
-}
-.main .infoContainer .infoDescr .item:nth-child(4) h5 {
-  white-space: nowrap;
+  width: 15%;
 }
 .main .infoContainer .infoItems .container {
   display: flex;
@@ -59,18 +53,54 @@ span {
   color: #000;
 }
 .main .infoContainer .infoItems .container .item:nth-child(1) {
-  width: 25%;
+  width: 20%;
 }
 .main .infoContainer .infoItems .container .item:nth-child(1) h5 {
   font-weight: 600;
   margin-left: 5px;
 }
 .main .infoContainer .infoItems .container .item:nth-child(2) {
-  width: 20%;
+  width: 65%;
 }
 .main .infoContainer .infoItems .container .item:nth-child(3) {
-  width: 45%;
+  width: 15%;
 }
-.main .infoContainer .infoItems .container .item:nth-child(4) {
-  width: 10%;
-}/*# sourceMappingURL=employees.module.css.map */
+.main .infoContainer .infoItems .container .item:nth-child(3) h5 {
+  padding: 6px 8px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(3) .green {
+  background-color: #D4F7CE;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 132px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(3) .green h5 {
+  color: #68C049;
+}
+.main .infoContainer .infoItems .container .item:nth-child(3) .yellow {
+  background-color: #F7EBCE;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 132px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(3) .yellow h5 {
+  color: #FFB400;
+}
+.main .infoContainer .infoItems .container .item:nth-child(3) .red {
+  background-color: #F7CECE;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 132px;
+}
+.main .infoContainer .infoItems .container .item:nth-child(3) .red h5 {
+  color: #FF5858;
+}/*# sourceMappingURL=clients.module.css.map */
