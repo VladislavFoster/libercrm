@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react'
+import React, {useState, useEffect} from 'react'
 import Header from '../../screens/header';
 import Nav from '../../screens/nav';
 import globalStyle from '../../layout/styles/globalStyle.module.css';
@@ -68,7 +68,6 @@ const Employees = () => {
 
   useEffect(()=>{
     setTimeout(()=>{setLoadState(true)}, 100)
-    
   })
  
 
