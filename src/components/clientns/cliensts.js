@@ -56,7 +56,6 @@ const Cliensts = () => {
     setTimeout(()=>{setLoadState(true)}, 100)
   })
 
-  console.log(data)
   return (
     <div>
       <Header/>

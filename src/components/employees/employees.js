@@ -17,7 +17,7 @@ const data = {
 
 
 async function handleLogin(){
-  await fetch('http://libercrmback/books/putEmployees.php', {
+  await fetch('http://libercrmback/employees/putEmployees.php', {
       method: 'POST',
       body: JSON.stringify(data),
       header: {
@@ -33,7 +33,7 @@ async function handleLogin(){
 }
 
 function getInfo(){
-   fetch('http://libercrmback/books/getEmployees.php', {
+   fetch('http://libercrmback/employees/getEmployees.php', {
       method: 'GET',
       header: {
           'Content-Type': 'charset=utf-8'
