@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from '../../screens/header';
 import Nav from '../../screens/nav';
 import globalStyle from '../../layout/styles/globalStyle.module.css';
@@ -6,29 +6,75 @@ import style from '../../layout/styles/rental.module.css'
 import arrowNavImg from '../../assets/imgs/arrowNavImg.png'
 import closeModal from '../../assets/imgs/closeModal.png'
 
+const data = {
+  "employeesName" : '',
+  "clientName" : '',
+  "bookName" : "",
+}
+
+async function handleLogin(){
+  await fetch('http://libercrmback/rental/putRental.php', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      header: {
+          'Content-Type': 'application/json;charset=utf-8'
+      },
+  }).then(response => response.json()).then(response => {
+      if(response === true){
+          alert('Новый работник добавлен')
+      }else{
+          alert('Ошибка')
+      }
+  })
+}
+
+function getInfo(){
+   fetch('http://libercrmback/rental/getRental.php', {
+      method: 'GET',
+      header: {
+          'Content-Type': 'charset=utf-8'
+      },
+  }).then(response => response.text()).then(response => {
+    
+    info.push(JSON.parse(response))
+  })
+}
+getInfo()
+const info = [];
+
 const Rental = () => {
   const [addBook, setAddBook] = useState(false)
   const [firstInfo, setFirstInfo] = useState();
   const [secondInfo, setSecondInfo] = useState();
   const [thirdInfo, setThirdInfo] = useState();
-  const [fourdInfo, setFourdInfo] = useState();
-  const [fifthInfo, setFifthInfo] = useState();
+
+  const [loadState, setLoadState] = useState()
+
+  useEffect(()=>{
+    data.employeesName = firstInfo
+    data.clientName = secondInfo
+    data.bookName = thirdInfo
+  }, [thirdInfo, setThirdInfo])
+
+  useEffect(()=>{
+    setTimeout(()=>{setLoadState(true)}, 100)
+  })
+  console.log(data)
   return (
     <div>
       <Header/>
       <Nav/>
       <div className={`${globalStyle['main']} ${style['main']}`}>
       <div className={globalStyle['btnAddContainer']}>
-          <button onClick={()=> setAddBook(true)}><h5>Добавить книгу</h5></button>
+          <button onClick={()=> setAddBook(true)}><h5>Добавить прокат</h5></button>
           {addBook ? 
           <div className={globalStyle['modal']}>
             <img src={closeModal} alt="" onClick={() =>setAddBook(false)}/>
             <h2>Введите информацию о книге</h2>
-            <input type="text" onChange={event=> setFirstInfo(event.target.value)} value={firstInfo} placeholder="Название книги"/>
-            <input type="text" onChange={event=> setSecondInfo(event.target.value)} value={secondInfo} placeholder="Автор книги"/>
-            <input type="text" onChange={event=> setThirdInfo(event.target.value)} value={thirdInfo} placeholder="Жанр книги"/>
-            <input type="text" onChange={event=> setFourdInfo(event.target.value)} value={fourdInfo} placeholder="Колличесвто страниц"/>
-            <button>Добавить книгу</button>
+            <input type="text" onChange={event=> setFirstInfo(event.target.value)} value={firstInfo} placeholder="ФИО ответственного"/>
+            <input type="text" onChange={event=> setSecondInfo(event.target.value)} value={secondInfo} placeholder="ФИО клиента"/>
+            <input type="text" onChange={event=> setThirdInfo(event.target.value)} value={thirdInfo} placeholder="Название книги"/>
+            <button onClick={handleLogin}>Добавить прокат</button>
           </div> 
           
           : ''}
@@ -57,15 +103,16 @@ const Rental = () => {
             </div>
           </div>
           <div className={style['infoItems']}>
-            <div className={style['container']}>
+            {info.map(item=>(
+              <div className={style['container']} key={item.id}>
               <div className={style['item']}>
-                <h5>ФИО сотрудника</h5>
+                <h5>{item.employees}</h5>
               </div>
               <div className={style['item']}>
-                <h5>ФИО клента</h5>
+                <h5>{item.client}</h5>
               </div>
               <div className={style['item']}>
-                <h5>Название книги</h5>
+                <h5>{item.book}</h5>
               </div>
               <div className={style['item']}>
                 <h5>123стр</h5>
@@ -74,6 +121,7 @@ const Rental = () => {
                 <div className={style['green']}><h5>Недавно выдано</h5></div>
               </div>
             </div>
+            ))}
           </div>
         </div>
       </div>
