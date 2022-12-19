@@ -39,7 +39,6 @@ function getInfo(){
           'Content-Type': 'charset=utf-8'
       },
   }).then(response => response.text()).then(response => {
-    
     employees.push(JSON.parse(response))
   })
 }

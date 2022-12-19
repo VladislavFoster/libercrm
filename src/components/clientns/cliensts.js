@@ -34,7 +34,6 @@ function getInfo(){
           'Content-Type': 'charset=utf-8'
       },
   }).then(response => response.text()).then(response => {
-    
     clients.push(JSON.parse(response))
   })
 }
@@ -93,18 +92,24 @@ const Cliensts = () => {
             
             {
               clients.map(item=>(
-              <div className={style['container']} key={item.id}>
-                <div className={style['item']}>
-                  <h5>{item.name}</h5>
-                </div>
-                <div className={style['item']}>
-                  <h5>{item.phone}</h5>
-                </div>
-                <div className={style['item']}>
-                  <div className={style['green']}><h5>Книги сданы</h5></div>
-                </div>
-              </div>
-              ))
+                item.map(param=>(
+                  <div className={style['container']} key={param.id}>
+                      <div className={style['item']}>
+                          <h5>{param.name}</h5>
+                      </div>
+                      <div className={style['item']}>
+                          <h5>{param.phone}</h5>
+                      </div>
+                      <div className={style['item']}>
+                          <div className={style['green']}><h5>Книги сданы</h5></div>
+                      </div>
+                  </div>
+                ))
+                
+                
+              )
+              
+              )
             }
           </div>
         </div>
